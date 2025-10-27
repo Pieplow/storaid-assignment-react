@@ -13,16 +13,18 @@ import YoutubeIcon from "../../assets/Youtube.png";
 
 function SocialBar() {
   return (
-    <div className="social-bar">
+<div className="social-bar">
+    <div className="contact">
       <div className="phone">
         <img src={phoneIcon} alt="contact by phone" />
-        <span>+46 8 123 122 44</span>
+        <a href="tel:+46812312244">+46 8 123 122 44</a>
       </div>
       <div className="email">
         <img src={emailIcon} alt="contact by email" />
-        <span>contact@domain.com</span>
+        <a href="mailto:contact@domain.com">contact@domain.com</a>
         </div>
-        
+    </div>
+    
     <div className="social-media">
       <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
         <img src={FacebookIcon} alt="Facebook" />
@@ -41,7 +43,7 @@ function SocialBar() {
       </a>
     </div>
       
-    </div>
+</div>
   );
 }
 
