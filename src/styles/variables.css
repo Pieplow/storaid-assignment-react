@@ -1,0 +1,16 @@
+:root {
+  --clr-background:white;
+  --clr-second-background:#12372A;
+  --color-text: #12372A;
+  --color-accent: #F1C30C;
+  --color-border: #e0e0e0;
+
+  
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+
+ 
+  --spacing-section: 80px;
+  --radius-base: 8px;
+  --max-width: 1200px;
+}
