@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from "../../generics/Button";
 import './Navbar.css';
 import logo from '../../assets/storaid-logo.svg';
 
@@ -15,9 +16,9 @@ function Navbar() {
         <a href="/services">Services</a>
         <a href="/contact">Contact</a>
       </nav>
-        <div className="navbar-btn">
-        <button className="btn">Book Now</button>
-        </div>
+        
+        <Button label="Book Now" />
+        
 
     </header>
   );
