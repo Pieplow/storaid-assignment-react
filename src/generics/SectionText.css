@@ -1,11 +1,11 @@
 .section-heading {
-  color: var(--color-accent);
+  color: var(--color-text);
   max-width: 600px;
   margin-bottom: 2rem;
 }
 
 .section-text_label {
-  color: #f1c40f;
+  color: #ffff;
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
@@ -19,7 +19,7 @@
 }
 
 .section-text_text {
-  color: #e0e0e0;
+  color: #ffff;
   line-height: 1.6;
   margin-bottom: 0;
 }
