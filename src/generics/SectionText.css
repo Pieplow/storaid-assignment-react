@@ -1,4 +1,6 @@
 .section-heading {
+  display: flex -1;
+  justify-content: center;
   color: var(--color-accent);
   max-width: 600px;
   margin-bottom: 2rem;
