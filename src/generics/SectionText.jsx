@@ -1,7 +1,7 @@
 import React from "react";
 import "./SectionText.css"; 
 
-export default function SectionText({
+function SectionText({
   label = "Welcome To StorAid",
   title = "Space Simplified, Storage Perfected",
   text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
