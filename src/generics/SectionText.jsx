@@ -1,5 +1,5 @@
-import React from 'react';
-import './SectionText.css';
+import React from "react";
+import "./SectionText.css"; 
 
 const SectionText = ({ label, title, text }) => (
   <div className="section-heading">
@@ -9,10 +9,10 @@ const SectionText = ({ label, title, text }) => (
   </div>
 );
 
-SectionHeading.defaultProps = {
+SectionText.defaultProps = {
   label: "Welcome To StorAid",
   title: "Space Simplified, Storage Perfected",
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a sem magna. Etiam ac odio sit amet lorem fringilla sodales. Cras lobortis, libero at iaculis luctus, nisi ex pellentesque nisi, at euismod sem ipsum ac dolor.",
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 };
 
 export default SectionText;
