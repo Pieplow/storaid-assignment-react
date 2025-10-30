@@ -1,14 +1,15 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SectionText from "../../generics/SectionText";
 import "./Footer.css";
 
 
-function Footer () {
+function Footer() {
   return (
-    <header className="Footer">
-      <SectionText text="2025" />
-    </header>
+    <footer className="footer text-white py-4">
+      <div className="container text-center">
+        <p className="mb-0">© 2025 StorAid - All rights reserved.</p>
+      </div>
+    </footer>
   );
 }
 
