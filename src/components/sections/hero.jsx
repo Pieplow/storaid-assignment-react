@@ -8,8 +8,10 @@ import './styles/global.css';
 function Hero() {
   return (
     <header className="hero">
-      <SectionText />
-      <Button />
+        <SectionText
+              title="Space Simplified, Storage Perfected"
+              text="Providing a safe space for your treasured items with modern, flexible storage solutions."
+            />
     </header>
   );
 }
