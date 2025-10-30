@@ -4,7 +4,7 @@ import SectionText from "../../generics/SectionText";
 import "./Footer.css";
 
 
-function Footer {
+function Footer () {
   return (
     <header className="Footer">
       <SectionText text="2025" />
