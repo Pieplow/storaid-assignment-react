@@ -4,6 +4,12 @@
 
 .hero-section img {
   display: block;
-  width: 300px;
+  max-width: 300px;
   height: auto;
 }
+
+.hero-section h2 {
+    color: var(--clr-background)
+
+}
+

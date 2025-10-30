@@ -9,7 +9,7 @@ function Hero() {
   return (
     <header className="hero-section pt-5 pb-0 text-white">
       <div className="container">
-        <div className="row align-items-center">
+        <div className="row align-items-center justify-content-center">
           <div className="col-md-6 text-center text-md-start">
             <SectionText
 
@@ -18,7 +18,7 @@ function Hero() {
             />
             <Button text="Discover More"/>
           </div>
-            <div className="col-md-6 text-center mt-4 mt-md-0">
+            <div className="col-auto text-center mt-5">
             <img
               src={heroImage}
               alt="Storage worker illustration"
