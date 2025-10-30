@@ -15,6 +15,13 @@ function Hero() {
             />
             <Button />
           </div>
+            <div className="col-md-6 text-center mt-4 mt-md-0">
+            <img
+              src={heroImage}
+              alt="Storage worker illustration"
+              className="img-fluid"
+            />
+          </div>
 
         
         </div>
