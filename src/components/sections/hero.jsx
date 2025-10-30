@@ -7,15 +7,16 @@ import "./Hero.css";
 
 function Hero() {
   return (
-    <header className="hero-section py-5 text-white">
+    <header className="hero-section pt-5 pb-0 text-white">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-md-6 text-center text-md-start">
             <SectionText
+
               title="Space Simplified, Storage Perfected"
               text="Providing a safe space for your treasured items with modern, flexible storage solutions."
             />
-            <Button />
+            <Button text="Discover More"/>
           </div>
             <div className="col-md-6 text-center mt-4 mt-md-0">
             <img

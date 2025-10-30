@@ -1,3 +1,7 @@
 .hero-section {
   background-color: var(--clr-second-background);
 }
+
+.hero-section img {
+  display: block;
+}
