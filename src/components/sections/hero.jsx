@@ -2,6 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SectionText from "../../generics/SectionText";
 import Button from "../../generics/Button";
 import heroImage from "../../assets/hero-image.svg";
+import "./Hero.css";
+
 
 function Hero() {
   return (
