@@ -9,6 +9,7 @@ const Logo = () => {
         <div className="row justify-content-center align-items-center text-center">
           <div className="col-4 col-md-2 my-2">
             <img src="/images/Logoipsum-1.svg" alt="Logo 1" className="img-fluid brand-logo" />
+            </div>
                <div className="col-4 col-md-2 my-2">
             <img src="/images/Logoipsum-2.svg" alt="Logo 2" className="img-fluid brand-logo" />
           </div>
@@ -24,7 +25,7 @@ const Logo = () => {
         </div>
       </div>
     </div>
-   </div>
+   
 
      );
 };
