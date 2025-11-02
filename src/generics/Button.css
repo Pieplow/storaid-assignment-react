@@ -1,6 +1,8 @@
 .btn {
   background-color: var(--color-accent);
   color: var(white);
+  font-weight: var(--font-weight-bold, 700);
+  font-size: 0.9rem;
   padding: 10px 24px;
   border: none;
   border-radius: 6px;
