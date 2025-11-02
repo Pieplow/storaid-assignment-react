@@ -6,14 +6,40 @@ import Button from '../../generics/Button';
 
 function BookNow() {
   return (
-    <section className="Book-now">
+    <section className="book-now-section text-center py-5 d-flex flex-column justify-content-center align-items-center">
+    
       <SectionText
+        label=""
         title="Looking for Secure and Flexible Storage? Find Your Perfect Fit With Us."
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi non sodales augue. Phasellus eget elit gravida."
       />
-        <button></button>
+        <Button label="Book Now" />
+    
     </section>
   );
 }
 
 export default BookNow;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
