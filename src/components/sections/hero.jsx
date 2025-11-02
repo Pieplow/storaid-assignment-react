@@ -16,7 +16,7 @@ function Hero() {
               title="Space Simplified, Storage Perfected"
               text="Providing a safe space for your treasured items with modern, flexible storage solutions."
             />
-            <Button label="Disover More"/>
+            <Button label="Discover More"/>
           </div>
             <div className="col-auto text-center mt-5">
             <img
