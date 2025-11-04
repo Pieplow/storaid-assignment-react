@@ -1,5 +1,5 @@
 .price-tile {
-  background-color: var(--color-text);
+  background-color: var(--clr-green-white-background);
   border: 2px solid #010813; 
   padding: 24px;
   width: 280px;
@@ -9,4 +9,66 @@
 .price-tile:hover {
   background-color: var(--color-text);
   color: white;
+}
+
+.price-tile h4 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.price {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.price img {
+  width: 16px;
+  height: 16px;
+}
+
+.price-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f59e0b; /* Gold-ish */
+}
+
+.price-period {
+  font-size: 1rem;
+  color: inherit;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.features li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+
+.features li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #16a34a;
+}
+
+.price-tile:hover .features li::before {
+  color: #facc15; /* Yellow check on hover */
+}
+
+.price-tile:hover .price-amount {
+  color: #facc15; /* Yellow price */
 }
