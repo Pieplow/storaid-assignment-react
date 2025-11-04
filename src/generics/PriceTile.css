@@ -1,0 +1,12 @@
+.price-tile {
+  background-color: var(--color-text);
+  border: 2px solid #010813; 
+  padding: 24px;
+  width: 280px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+.price-tile:hover {
+  background-color: var(--color-text);
+  color: white;
+}
