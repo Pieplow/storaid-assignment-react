@@ -1,0 +1,29 @@
+.newsletter-section {
+  background-color: var(--clr-beige-background);
+  padding: 2rem 0;
+}
+
+.newsletter-section form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.newsletter-section input[type="email"] {
+  flex: 1;
+  max-width: 300px;
+  padding: 0.6rem 1rem;
+  border: 1px solid #f7b500; 
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+
+.newsletter-section input[type="email"]::placeholder {
+  color: #dad1d1;
+}
+
