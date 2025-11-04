@@ -4,6 +4,8 @@ import Hero from "./components/sections/Hero";
 import Footer from "./components/sections/Footer";
 import Logo from "./components/sections/Logo";
 import BookNow from "./components/sections/Book-now";
+import OurServices from "./components/sections/OurServices";
+
 import "./styles/global.css";
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
       <Header />
       <Hero />
       <Logo />
+      <OurServices />
       <BookNow />
       <Footer />
       
