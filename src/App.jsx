@@ -5,6 +5,7 @@ import Footer from "./components/sections/Footer";
 import Logo from "./components/sections/Logo";
 import BookNow from "./components/sections/Book-now";
 import OurServices from "./components/sections/OurServices";
+import Newsletter from "./components/sections/Newsletter"; 
 
 import "./styles/global.css";
 
@@ -16,6 +17,7 @@ function App() {
       <Logo />
       <OurServices />
       <BookNow />
+      <Newsletter />
       <Footer />
       
     
