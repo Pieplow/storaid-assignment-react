@@ -1,6 +1,6 @@
 import React from "react";
-import Button from '../../generics/Button';
-import DollarSign from '../../assets/dollar-pricetile.svg';
+import Button from './Button';
+import DollarSign from "../assets/dollar-pricetile.svg";
 import "./PriceTile.css";
 
 const PriceTile = ({ title, price }) => {
