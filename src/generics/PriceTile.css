@@ -5,7 +5,20 @@
   width: 280px;
   transition: all 0.3s ease;
   box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.price {
+  display: flex;
+  align-items: flex-start; /*ficar dollar tecknet*/
+  justify-content: center; 
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
 .price-tile:hover {
   background-color: var(--color-text);
   color: white;
@@ -27,12 +40,13 @@
 .price img {
   width: 16px;
   height: 16px;
+  transform: translateY(-4px);
 }
 
 .price-amount {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #f59e0b; /* Gold-ish */
+  color: #f59e0b;
 }
 
 .price-period {
@@ -66,9 +80,15 @@
 }
 
 .price-tile:hover .features li::before {
-  color: #facc15; /* Yellow check on hover */
+  color: #facc15; 
 }
 
 .price-tile:hover .price-amount {
-  color: #facc15; /* Yellow price */
+  color: #facc15; 
 }
+
+.price-tile button {
+  display: block;
+  margin: 0 auto; 
+}
+
