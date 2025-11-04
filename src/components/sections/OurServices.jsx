@@ -2,21 +2,23 @@ import React from 'react'
 import Tile from '../../generics/Tile'
 import SectionText from '../../generics/SectionText'
 import OurServicesImage from '../../assets/Our-services-grey.png'
+import "./OurServices.css"
 
 const OurServices = () => {
   return (
     <section className="OurServices-section py-5">
       <div className="container">
-        <div className="row mb-5 align-items-start">
+        <div className="row mb-6 align-items-start">
           <div className="col-md-6">
             <SectionText
               label="Our Services"
               title="Specialized Storage for Every Special Item"
+              text=""
             />
           </div>
           <div className="col-md-6">
-            <p className="section-paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nisl nec dui tinciduntL, vel dictum lorem gravida. Mauris sagittis orci eget gravida.
+            <p className="section-paragraph mt-5">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi non sodales augue. Phasellus eget elit gravida.
             </p>
           </div>
         </div>
