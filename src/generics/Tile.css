@@ -1,0 +1,30 @@
+.tile {
+  border: 1px solid var(--color-border);
+  background-color: var(--clr-background);
+  padding: 1.5rem;
+  transition: all 0.25s ease;
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  max-width: 27%;
+  margin: 0; 
+}
+
+.tile:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.tile h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.tile p {
+  color: var(--color-text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
