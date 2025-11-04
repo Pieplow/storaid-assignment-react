@@ -16,7 +16,7 @@ const OurServices = () => {
           </div>
           <div className="col-md-6">
             <p className="section-paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nisl nec dui tincidunt, vel dictum lorem gravida. Mauris sagittis orci eget gravida.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nisl nec dui tinciduntL, vel dictum lorem gravida. Mauris sagittis orci eget gravida.
             </p>
           </div>
         </div>
@@ -25,12 +25,12 @@ const OurServices = () => {
           <div className="col-md-4 d-flex flex-column gap-3">
             <Tile
               title="Diverse Unit Sizes"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi."
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.."
               borderColor="yellow"
             />
             <Tile
               title="Moving Assistance"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi."
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.."
             />
           </div>
 
@@ -45,11 +45,11 @@ const OurServices = () => {
           <div className="col-md-4 d-flex flex-column gap-3">
             <Tile
               title="Vehicle Storage"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi."
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
             />
             <Tile
               title="Top-Notch Security"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi."
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
             />
           </div>
         </div>
