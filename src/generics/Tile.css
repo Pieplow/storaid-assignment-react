@@ -5,7 +5,6 @@
   transition: all 0.25s ease;
   border-radius: var(--radius-base);
   cursor: pointer;
-  max-width: 27%;
   margin: 0; 
 }
 
