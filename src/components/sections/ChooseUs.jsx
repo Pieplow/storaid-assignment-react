@@ -16,7 +16,7 @@ const ChooseUs = () => {
         <div className="row mb-5 align-items-start">
           <div className="col-md-6">
             <SectionText
-              label="Our Services"
+              label="Why Choose Us"
               title="Specialized Storage for Every Special Item"
               text=""
             />
