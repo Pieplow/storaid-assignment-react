@@ -26,11 +26,6 @@ const Newsletter = () => {
 
 
 
-
-
-
-
-
   return (
 <section className="newsletter-section py-4">
   <div className="container">
