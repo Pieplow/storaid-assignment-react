@@ -7,13 +7,12 @@
   font-weight: 700;
 }
 
-.section-text-right .text {
+.section-text-right p:last-of-type {
   color: var(--color-text);
-  font-weight: 400;
 }
 
 .green-box {
-  background-color: #123C32;
+  background-color: var(--color-text);
   color: #fff;
   display: flex;
   justify-content: space-between;
