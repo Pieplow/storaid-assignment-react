@@ -1,0 +1,52 @@
+.green-box {
+  background-color: #123C32;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;        
+  padding: 0.4rem 1.5rem; 
+  border-radius: 8px;
+  width: 75%;
+  max-width: 700px;   
+  margin: 0 auto;  
+  position: absolute;    /* överlappning */
+  bottom: -25px;            
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;              
+}
+
+.phone-icon-wrapper {
+  background-color: var(--color-text);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;       /* skapar circlen*/
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.phone-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.phone-label {
+  font-weight: 700;
+  font-family: var(--font-main);
+  color: var(--color-text);          
+  line-height: 1.2;
+  letter-spacing: 1px;
+  
+}
+
+.phone-number {
+  font-weight: 700;
+  color: var(--color-text);       
+  font-size: 1rem;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
