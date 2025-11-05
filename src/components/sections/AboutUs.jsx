@@ -24,11 +24,13 @@ const AboutUs = () => {
 
         
         <div className="col-md-6">
+            <div className="section-text-right">
           <SectionText
             label="About Us"
             title="Delivering Excellence"
             text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, veniam quam rem quas rerum quod itaque suscipit qui ea aspernatur aliquid tempora excepturi vitae. Omnis nostrum similique fuga dignissimos cum!"
           />
+          </div>
           <div className="tiles d-flex justify-content-between align-items-start gap-4 ">
             <Tile title="Mission"
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."/>

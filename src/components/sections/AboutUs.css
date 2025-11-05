@@ -1,3 +1,17 @@
+.section-text-right h2{
+    color: var(--color-text);
+    
+}
+.section-text-right .label {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.section-text-right .text {
+  color: var(--color-text);
+  font-weight: 400;
+}
+
 .green-box {
   background-color: #123C32;
   color: #fff;
