@@ -5,7 +5,9 @@ import Footer from "./components/sections/Footer";
 import Logo from "./components/sections/Logo";
 import BookNow from "./components/sections/Book-now";
 import OurServices from "./components/sections/OurServices";
+import PriceCards from "./components/sections/PriceCards";
 import Newsletter from "./components/sections/Newsletter"; 
+import ChooseUs from "./components/sections/ChooseUs"; 
 
 import "./styles/global.css";
 
@@ -16,6 +18,8 @@ function App() {
       <Hero />
       <Logo />
       <OurServices />
+      <ChooseUs />
+      <PriceCards />
       <BookNow />
       <Newsletter />
       <Footer />
