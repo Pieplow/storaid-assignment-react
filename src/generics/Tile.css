@@ -6,6 +6,7 @@
   border-radius: var(--radius-base);
   cursor: pointer;
   margin: 0; 
+  
 }
 
 .tile:hover {
