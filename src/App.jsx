@@ -7,7 +7,8 @@ import BookNow from "./components/sections/Book-now";
 import OurServices from "./components/sections/OurServices";
 import PriceCards from "./components/sections/PriceCards";
 import Newsletter from "./components/sections/Newsletter"; 
-import ChooseUs from "./components/sections/ChooseUs"; 
+import ChooseUs from "./components/sections/ChooseUs";
+import AboutUs from "./components/sections/AboutUs";
 
 import "./styles/global.css";
 
@@ -16,6 +17,7 @@ function App() {
     <>
       <Header />
       <Hero />
+      <AboutUs />
       <Logo />
       <OurServices />
       <ChooseUs />
