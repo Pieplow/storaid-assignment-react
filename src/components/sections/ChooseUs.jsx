@@ -3,6 +3,9 @@ import SectionText from '../../generics/SectionText'
 import OurServicesImage from '../../assets/Our-services-grey.png'
 import Lock from '../../assets/Lock.svg'
 import Clock from '../../assets/Clock.svg'
+import Money from '../../assets/money.svg'
+import Shield from '../../assets/shield.svg'
+
 
 import "./ChooseUs.css"
 
@@ -35,8 +38,8 @@ const ChooseUs = () => {
                     src={Lock}
                     alt="Security icon"
                     className="me-3"
-                    width="40"
-                    height="40"
+                    width="50"
+                    height="50"
                   />
                   <div>
                     <h3>Security and Safety</h3>
@@ -51,11 +54,11 @@ const ChooseUs = () => {
               <li >
                 <div className="d-flex align-items-start">
                   <img
-                    src={Lock}
+                    src={Money}
                     alt="Flexible icon"
                     className="me-3"
-                    width="40"
-                    height="40"
+                    width="50"
+                    height="50"
                   />
                   <div>
                     <h3>Flexible and Affordable</h3>
@@ -70,11 +73,11 @@ const ChooseUs = () => {
               <li >
                 <div className="d-flex align-items-start">
                   <img
-                    src={Lock}
+                    src={Shield}
                     alt="Clean icon"
                     className="me-3"
-                    width="40"
-                    height="40"
+                    width="50"
+                    height="50"
                   />
                   <div>
                     <h3>Clean and Well-Maintained Facilities</h3>
@@ -92,8 +95,8 @@ const ChooseUs = () => {
                     src={Clock}
                     alt="Access icon"
                     className="me-3"
-                    width="40"
-                    height="40"
+                    width="50"
+                    height="50"
                   />
                   <div>
                     <h3>24/7 and Convenient Access</h3>
