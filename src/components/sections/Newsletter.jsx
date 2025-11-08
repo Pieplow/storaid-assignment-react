@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import Button from '../../generics/Button';
 import SectionText from '../../generics/SectionText';
+import { sendSubscribe } from '../../services/api'
 import "./Newsletter.css";
 
 const Newsletter = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const isValidEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -18,17 +21,28 @@ const Newsletter = () => {
     setError(isValidEmail(value) ? '' : 'Invalid email address');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!isValidEmail(email)) {
       setError("Please enter a valid email before submitting");
-    } else {
-      setError('');
-      alert("Email Submitted: " + email);
-      setEmail('');
-    }
-  };
+     return;
+  }
+
+  setError('');
+  setMessage('');
+  setLoading(true);
+
+  try {
+    const response = await sendSubscribe({ email }); 
+    setMessage(response.message || "You're now subscribed!");
+    setEmail('');
+  } catch (err) {
+    setError('Subscription failed. Please try again later.');
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <section className="newsletter-section py-4">
@@ -52,7 +66,9 @@ const Newsletter = () => {
                 onChange={handleChange}
               />
               {error && <div className="error text-danger">{error}</div>}
-              <Button label="Submit" />
+              {message && <div className="text-success mt-2">{message}</div>}
+
+              <Button label={loading ? "Submitting..." : "Submit"} />
             </form>
           </div>
         </div>
