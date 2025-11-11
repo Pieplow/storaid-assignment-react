@@ -57,6 +57,7 @@ const Newsletter = () => {
           </div>
 
           <div className="col-md-6">
+            <div className="newsletter-form-wrapper">
             <form onSubmit={handleSubmit}>
               <label htmlFor="newsletter-email" className="visually-hidden">
                 Email address
@@ -73,13 +74,13 @@ const Newsletter = () => {
 
               <Button label={loading ? "Submitting..." : "Submit"} 
               disabled={loading} />
-              <div className="mt-3">
+             
+            </form>
+             <div className="mt-3">
                     {error && <div role="alert" className="error text-danger">{error}</div>}
             {message && <div role="alert" className="text-success mt-2">{message}</div>}
              </div>
-            </form>
-            
-            
+            </div>
           </div>
         </div>
       </div>

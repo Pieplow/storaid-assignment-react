@@ -152,8 +152,8 @@
 }
 
 .faq-answer-wrapper {
-  padding: 8px 20px; /* Mindre padding runt svaret */
-  background-color: #fffbea; /* eller behåll din befintliga färg */
+  padding: 8px 20px; 
+  background-color: #fffbea; 
   border-radius: 0 0 8px 8px;
 }
 
