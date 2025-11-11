@@ -9,6 +9,7 @@ import PriceCards from "./components/sections/PriceCards";
 import Newsletter from "./components/sections/Newsletter"; 
 import ChooseUs from "./components/sections/ChooseUs";
 import AboutUs from "./components/sections/AboutUs";
+import FAQSection from "./components/sections/FAQSection";
 
 import "./styles/global.css";
 
@@ -21,6 +22,7 @@ function App() {
       <Logo />
       <OurServices />
       <ChooseUs />
+      <FAQSection />
       <PriceCards />
       <BookNow />
       <Newsletter />
