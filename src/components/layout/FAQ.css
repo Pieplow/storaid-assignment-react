@@ -1,0 +1,164 @@
+.faq-section {
+  background-color: #fff;
+}
+
+.faq-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.faq-item.active {
+  background-color: #fffbea;
+  border: 1px solid #f7b500;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 1.25rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.faq-question:hover {
+  background-color: #f2f2f2;
+}
+
+.faq-item.active .faq-question {
+  background-color: #f7b500;
+  color: #fff;
+}
+
+.faq-icon {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.faq-item.active .faq-answer-wrapper {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.faq-answer {
+  padding: 1rem 1.5rem 1.25rem 1.5rem;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.faq-error {
+  color: #dc3545;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* FAQ-sektion – tar bort onödig padding i containern */
+.faq-section .container {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* FAQ-listan justeras så att innehållet inte trycks in */
+.faq-section .row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Själva accordionen får följa sidans kant */
+.faq-list {
+  padding-right: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* För större skärmar – finjustering */
+@media (min-width: 992px) {
+  .faq-section .col-lg-8 {
+    padding-right: 0 !important;
+  }
+}
+
+/* Gör FAQ-accordionen bredare inom sin kolumn */
+.faq-section .faq-list {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Gör hela FAQ-kolumnen bredare på stora skärmar */
+@media (min-width: 992px) {
+  .faq-section .col-lg-8 {
+    flex: 0 0 85%;   /* tar upp mer horisontellt utrymme */
+    max-width: 85%;
+  }
+}
+
+/* Justera mellanrum så den inte trycks in från kanterna */
+.faq-section .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px; /* Minska vertikal padding (tidigare kanske 18px 24px) */
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: #f8f8f8;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item.active .faq-question {
+  background-color: #ffc107;
+}
+
+.faq-answer-wrapper {
+  padding: 8px 20px; /* Mindre padding runt svaret */
+  background-color: #fffbea; /* eller behåll din befintliga färg */
+  border-radius: 0 0 8px 8px;
+}
+
+.faq-answer {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
