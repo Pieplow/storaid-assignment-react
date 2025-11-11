@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { getTestimonials } from "../../services/api";
 import TestimonialCard from "../../generics/TestimonialCard";
 import SectionText from "../../generics/SectionText"; 
+import "./TestimonialSection.css";
+
 
 const TestimonialSection = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -20,7 +22,7 @@ const TestimonialSection = () => {
   }, []);
 
   return (
-    <section className="py-5 bg-success-subtle">
+    <section className="testimonial-section py-5">
       <div className="container">
         <div className="row justify-content-center mb-5">
           <div className="col-lg-6 text-center">
