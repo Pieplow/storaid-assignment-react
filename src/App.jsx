@@ -10,6 +10,7 @@ import Newsletter from "./components/sections/Newsletter";
 import ChooseUs from "./components/sections/ChooseUs";
 import AboutUs from "./components/sections/AboutUs";
 import FAQSection from "./components/sections/FAQSection";
+import TestimonialSection from "./components/sections/TestimonialSection";
 
 import "./styles/global.css";
 
@@ -21,6 +22,7 @@ function App() {
       <AboutUs />
       <Logo />
       <OurServices />
+      <TestimonialSection />
       <ChooseUs />
       <FAQSection />
       <PriceCards />
