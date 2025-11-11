@@ -1,33 +1,45 @@
 import React from "react";
 import "./TestimonialCard.css";
+import "./TestimonialCard.css";
 
 import QuoteIcon from gener
 
-const TestimonialCard = ({ review, logo }) => {
+const TestimonialCard = ({ review }) => {
   return (
-    <div className="testimonial-card">
-      <div className="testimonial-header">
-        {logo && (
-          <img
-            src={logo}
-            alt="Company logo"
-            className="testimonial-logo"
-          />
-        )}
-        <div className="stars">
-          {"★".repeat(review.rating)}{"☆".repeat(5 - review.rating)}
-        </div>
+    <div className="testimonial-card bg-white rounded-3 shadow-sm p-4">
+      {/* Rating */}
+      <div className="stars text-success mb-3">
+        {"★".repeat(review.rating || 4)}
+        {"☆".repeat(5 - (review.rating || 4))}
       </div>
 
-      <p className="review-text">{review.text}</p>
+      {/* Review text */}
+      <p className="text-secondary mb-4">{review.comment}</p>
 
-      <div className="reviewer">
-        <div className="avatar"></div>
-        <div>
-          <h5 className="reviewer-name">{review.name}</h5>
-          <p className="reviewer-role">{review.role}</p>
+      {/* Reviewer info */}
+      <div className="d-flex align-items-center justify-content-between">
+        <div className="d-flex align-items-center">
+          <img
+            src={review.avatarUrl}
+            alt={review.name}
+            className="avatar rounded-circle bg-light me-3"
+            width="50"
+            height="50"
+          />
+          <div>
+            <h6 className="fw-bold mb-0 text-dark">{review.name}</h6>
+            <small className="text-muted">{review.companyName}</small>
+          </div>
         </div>
-        <span className="quote-icon">❞</span>
+
+        {/* Quote icon */}
+        <img
+          src={QuoteIcon}
+          alt="quote icon"
+          className="quote-icon"
+          width="30"
+          height="30"
+        />
       </div>
     </div>
   );
