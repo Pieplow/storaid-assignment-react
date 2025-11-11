@@ -58,18 +58,28 @@ const Newsletter = () => {
 
           <div className="col-md-6">
             <form onSubmit={handleSubmit}>
+              <label htmlFor="newsletter-email" className="visually-hidden">
+                Email address
+                </label>
               <input
+                id="newsletter-email"
                 type="email"
                 placeholder="Enter your email *"
                 required
                 value={email}
                 onChange={handleChange}
               />
-              {error && <div className="error text-danger">{error}</div>}
-              {message && <div className="text-success mt-2">{message}</div>}
+       
 
-              <Button label={loading ? "Submitting..." : "Submit"} />
+              <Button label={loading ? "Submitting..." : "Submit"} 
+              disabled={loading} />
+              <div className="mt-3">
+                    {error && <div role="alert" className="error text-danger">{error}</div>}
+            {message && <div role="alert" className="text-success mt-2">{message}</div>}
+             </div>
             </form>
+            
+            
           </div>
         </div>
       </div>
