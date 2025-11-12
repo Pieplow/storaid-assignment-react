@@ -1,7 +1,7 @@
 import React from "react";
 import ContactForm from "../../generics/ContactForm";
 import SectionText from "../../generics/SectionText";
-import greyImageBooking from "../../assets/grey-image-booking.svg";
+import greyImageBooking from "../../assets/grey-image-contact.svg";
 
 import "./ContactSection.css";
 
