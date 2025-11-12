@@ -7,7 +7,7 @@ import "./ContactSection.css";
 
 const ContactSection = () => {
   return (
-    <section className="contact-section container py-5">
+    <section className="contact-section container py-5" aria-labelledby="contact-heading">
       <div className="row align-items-center">
         
         <div className="col-md-6 text-center text-md-start mb-4 mb-md-0">
@@ -21,7 +21,7 @@ const ContactSection = () => {
 
           <img
             src={greyImageBooking}
-            alt="Booking illustration"
+            alt="Illustration of a customer contacting support"
             className="img-fluid mt-4 booking-image"
             loading="lazy"
           />
