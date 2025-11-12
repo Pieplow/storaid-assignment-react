@@ -1,0 +1,16 @@
+.contact-section .row {
+  min-height: 100%;
+  align-items: center;
+}
+
+.contact-section .section-text_text p.text-accent,
+.contact-section .section-text_text p:first-child {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.contact-section .section-text_text p:last-child {
+  color: var(--clr-dark-green-background);
+  opacity: 0.9;
+}
