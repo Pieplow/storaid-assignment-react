@@ -1,16 +1,40 @@
+.contact-section .section-text-left h2 {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.contact-section .section-text-left .label {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.contact-section .section-text-left p:last-of-type {
+  color: var(--color-text);
+  opacity: 0.9;
+}
+
+/* Bilden */
+.contact-section .booking-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  margin-top: 1.5rem;
+}
+
+/* Formulärkolumnen */
+.contact-section .section-text-right form {
+  background-color: transparent;
+  color: var(--color-text);
+}
+
+
 .contact-section .row {
-  min-height: 100%;
   align-items: center;
 }
 
-.contact-section .section-text_text p.text-accent,
-.contact-section .section-text_text p:first-child {
-  color: var(--color-accent);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-.contact-section .section-text_text p:last-child {
-  color: var(--clr-dark-green-background);
-  opacity: 0.9;
+.contact-section .section-text-right h2,
+.contact-section .section-text-right p,
+.contact-section .section-text-right label {
+  color: var(--color-text);
 }
