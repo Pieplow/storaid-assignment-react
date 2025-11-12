@@ -58,7 +58,7 @@ export const getTestimonials = async () => {
 
 export const getBlogs = async () => {
   try {
-    const res = await fetch(`${BASE_URL}/blogs/latest`);
+    const res = await fetch(`${BASE_URL}/blogs`);
     if (!res.ok) throw new Error("Kunde inte hämta bloggar");
     return await res.json();
   } catch (err) {

@@ -11,7 +11,7 @@ import ChooseUs from "./components/sections/ChooseUs";
 import AboutUs from "./components/sections/AboutUs";
 import FAQSection from "./components/sections/FAQSection";
 import TestimonialSection from "./components/sections/TestimonialSection";
-
+import BlogSection from "./components/sections/BlogSection";
 import "./styles/global.css";
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
       <FAQSection />
       <PriceCards />
       <BookNow />
+      <BlogSection />
       <Newsletter />
       <Footer />
       
