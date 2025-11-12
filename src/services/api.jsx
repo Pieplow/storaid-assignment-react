@@ -32,6 +32,20 @@ export const sendContact = async (data) => {
   }
 };
 
+export const sendBooking = async (data) => {
+  try {
+    const res = await fetch(`${BASE_URL}/booking`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) throw new Error("Kunde inte skicka bokningsformulär");
+    return await res.json();
+  } catch (err) {
+    console.error("API error (booking):", err);
+    throw err;
+  }
+};
 
 //GET//
 export const getFaqs = async () => {
