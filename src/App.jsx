@@ -13,6 +13,7 @@ import FAQSection from "./components/sections/FAQSection";
 import TestimonialSection from "./components/sections/TestimonialSection";
 import BlogSection from "./components/sections/BlogSection";
 import ContactSection from "./components/sections/ContactSection";
+import BookingSection from "./components/sections/BookingSection";
 import "./styles/global.css";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Logo />
       <OurServices />
       <TestimonialSection />
+      <BookingSection />
       <ChooseUs />
       <FAQSection />
       <ContactSection />

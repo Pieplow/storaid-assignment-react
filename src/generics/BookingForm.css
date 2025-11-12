@@ -1,0 +1,56 @@
+.booking-form-wrapper {
+  background-color: var(--clr-beige-background);
+  border-radius: var(--radius-base);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.booking-form-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.booking-form-wrapper .form-label {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.booking-form-wrapper .form-control {
+  background-color: #fff;
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-base);
+  padding: 10px 14px;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+.booking-form-wrapper .form-control:focus {
+  border-color: var(--color-accent);
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(241, 195, 12, 0.25);
+}
+
+.booking-form-wrapper .btn-warning {
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: var(--radius-base);
+  padding: 10px 26px;
+  transition: all 0.3s ease;
+}
+
+.booking-form-wrapper .btn-warning:hover {
+  background-color: var(--clr-light-green-background);
+  color: #fff;
+}
+
+.booking-form-wrapper .text-success {
+  font-weight: 600;
+}
+
+.booking-form-wrapper .text-danger {
+  color: #dc3545;
+}
