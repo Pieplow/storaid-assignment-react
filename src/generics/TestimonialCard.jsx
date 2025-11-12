@@ -2,7 +2,9 @@ import React from "react";
 import "./TestimonialCard.css";
 import "./TestimonialCard.css";
 
-import QuoteIcon from gener
+import QuoteIcon from '../assets/quote-icon.svg'
+
+
 
 const TestimonialCard = ({ review }) => {
   return (
