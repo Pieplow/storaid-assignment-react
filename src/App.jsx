@@ -12,6 +12,7 @@ import AboutUs from "./components/sections/AboutUs";
 import FAQSection from "./components/sections/FAQSection";
 import TestimonialSection from "./components/sections/TestimonialSection";
 import BlogSection from "./components/sections/BlogSection";
+import ContactSection from "./components/sections/ContactSection";
 import "./styles/global.css";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <TestimonialSection />
       <ChooseUs />
       <FAQSection />
+      <ContactSection />
       <PriceCards />
       <BookNow />
       <BlogSection />
