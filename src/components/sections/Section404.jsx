@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
 import Newsletter from './Newsletter'
-import Hero from './Hero'
+import Hero from './HeroSection'
 import Header from './Header'
 
 const Section404 = () => {
