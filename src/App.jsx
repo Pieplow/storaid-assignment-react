@@ -1,16 +1,15 @@
-import { Routes, Route } from "react-router-dom"
+import SocialBar from "./components/layout/SocialBar";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/sections/Footer";
 
-import SocialBar from "./components/SocialBar"
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
-import Newsletter from "./components/Newsletter"
+import { Routes, Route } from "react-router-dom";
 
-import Home from "./Pages/Home"
-import About from "./Pages/About"
-import Services from "./Pages/Services"
-import Contact from "./Pages/Contact"
-import Booking from "./Pages/Booking"
-import NotFound from "./Pages/NotFound"
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Services from "./Pages/Services";
+import Contact from "./Pages/Contact";
+import Booking from "./Pages/Booking";
+import NotFound from "./Pages/NotFound";
 
 export default function App() {
   return (
@@ -27,8 +26,7 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
 
-      <Newsletter />
       <Footer />
     </>
-  )
+  );
 }
