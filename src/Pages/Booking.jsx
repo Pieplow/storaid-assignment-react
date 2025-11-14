@@ -1,4 +1,8 @@
 import HeroSection from "../components/sections/HeroSection";
+import ChooseUs from "../components/sections/ChooseUs";
+import BookingSection from "../components/sections/BookingSection";
+import FAQ from "../components/sections/FAQSection";
+import BookNowSection from "../components/sections/Book-now";
 
 export default function Booking() {
   return (
@@ -7,6 +11,11 @@ export default function Booking() {
         title="Book Your Storage"
         subtitle="Fast and simple booking."
       />
+      <BookingSection />
+      <ChooseUs />
+      <BookNowSection />
+      <FAQ />
+
     </>
   );
 }
