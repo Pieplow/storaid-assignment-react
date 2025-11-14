@@ -62,6 +62,7 @@ const Newsletter = () => {
               <label htmlFor="newsletter-email" className="visually-hidden">
                 Email address
                 </label>
+                <div className="newsletter-row">
               <input
                 id="newsletter-email"
                 type="email"
@@ -72,16 +73,18 @@ const Newsletter = () => {
               />
        
 
-                      <Button 
+            <Button 
             type="submit"
             label={loading ? "Submitting..." : "Submit"} 
             disabled={loading}
-/>
-             <div className="mt-3">
-                    {error && <div role="alert" className="error text-danger">{error}</div>}
-            {message && <div role="alert" className="text-success mt-2">{message}</div>}
-             </div>
-             </form>
+            />
+           </div>
+  <div className="mt-3">
+    {error && <div className="error text-danger">{error}</div>}
+    {message && <div className="text-success">{message}</div>}
+  </div>
+
+</form>
             </div>
           </div>
         </div>
