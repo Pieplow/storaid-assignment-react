@@ -1,12 +1,12 @@
 import React from "react";
 
-import MainImage from "../../assets/MainImage.png";
+import MainImage from "../../assets/MainImage.svg";
 import PhoneIcon from "../../assets/PhoneIcon.svg";
-import Email from "../../assets/Email.svg";
-import Pin from "../../assets/Pin.svg";
-import FacebookIcon from "../../assets/FacebookIcon.svg";
-import InstagramIcon from "../../assets/InstagramIcon.svg";
-import YoutubeIcon from "../../assets/YoutubeIcon.svg";
+import Email from "../../assets/email.svg";
+import Pin from "../../assets/pin.svg";
+import FacebookIcon from "../../assets/Facebook.png";
+import InstagramIcon from "../../assets/Instagram.png";
+import YoutubeIcon from "../../assets/Youtube.png";
 
 import "./FindUsSection.css"
 
