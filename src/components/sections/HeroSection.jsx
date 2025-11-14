@@ -4,9 +4,9 @@ import Button from "../../generics/Button";
 import heroImage from "../../assets/hero-image.svg";
 import "./Hero.css";
 
-function Hero({ label, title, text, showButton = true, showImage = true }) {
+function Hero({ label, title, text, showButton = true, showImage = true, className = "" }) {
   return (
-    <header className="hero-section pt-5 pb-0 text-white">
+    <header className={`hero-section ${className} pt-5 pb-0 text-white`}>
       <div className="container">
         <div className="row align-items-center justify-content-center">
           <div className="col-md-6 text-center text-md-start">
@@ -19,7 +19,6 @@ function Hero({ label, title, text, showButton = true, showImage = true }) {
             {showButton && <Button label="Discover More" />}
           </div>
 
-          {/* 🔥 Only show the image if showImage === true */}
           {showImage && (
             <div className="col-auto text-center mt-5">
               <img
