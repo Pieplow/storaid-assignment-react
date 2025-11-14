@@ -5,8 +5,6 @@ import Hero from "../components/sections/HeroSection";
 export default function Section404() {
   return (
     <>
-      <Header />
-
       <Hero
         title="404 - Page Not Found"
         text="The page you're looking for doesn’t exist or has been moved."
@@ -14,8 +12,6 @@ export default function Section404() {
         buttonLink="/"
         hideImage={true}   // <-- så du bara får text + knapp
       />
-
-      <Footer />
     </>
   );
 }
