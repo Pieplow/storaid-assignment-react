@@ -67,19 +67,23 @@ const Newsletter = () => {
                 type="email"
                 placeholder="Enter your email *"
                 required
+                aria-describedby={error ? "newsletter-error" : undefined}
                 value={email}
                 onChange={handleChange}
               />
        
 
-              <Button label={loading ? "Submitting..." : "Submit"} 
-              disabled={loading} />
-             
-            </form>
+              <Button 
+              type="submit"
+              label={loading ? "Submitting..." : "Submit"} 
+              disabled={loading}
+              />
+
              <div className="mt-3">
                     {error && <div role="alert" className="error text-danger">{error}</div>}
             {message && <div role="alert" className="text-success mt-2">{message}</div>}
              </div>
+             </form> 
             </div>
           </div>
         </div>
