@@ -1,6 +1,8 @@
 import SocialBar from "./components/layout/SocialBar";
 import Navbar from "./components/layout/Navbar";
+import Newsletter from "./components/sections/Newsletter";
 import Footer from "./components/sections/Footer";
+
 
 import { Routes, Route } from "react-router-dom";
 
@@ -25,8 +27,10 @@ export default function App() {
         <Route path="/booking" element={<Booking />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-
+      
+      <Newsletter />
       <Footer />
+      
     </>
   );
 }
