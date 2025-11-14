@@ -14,5 +14,4 @@ function SectionText({
     </div>
   );
 }
-
 export default SectionText;

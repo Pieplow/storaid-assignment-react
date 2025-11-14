@@ -1,6 +1,9 @@
 .hero-section {
   background-color: var(--clr-light-green-background);
 }
+.hero-section .section-text_label {
+  color: var(--accent);
+}
 
 .hero-section img {
   display: block;
