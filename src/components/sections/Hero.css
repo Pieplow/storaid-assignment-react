@@ -1,0 +1,15 @@
+.hero-section {
+  background-color: var(--clr-light-green-background);
+}
+
+.hero-section img {
+  display: block;
+  max-width: 300px;
+  height: auto;
+}
+
+.hero-section h2 {
+    color: var(--clr-background)
+
+}
+

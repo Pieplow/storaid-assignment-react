@@ -1,0 +1,14 @@
+.testimonial-section {
+  background-image: 
+  url("../../assets/testimonials-bg.svg"),
+  url("../../assets/green-filter.svg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.testimonial-section h2 {
+    color: white;
+
+}

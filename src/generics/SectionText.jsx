@@ -1,5 +1,5 @@
 import React from "react";
-import "./SectionText.css"; 
+import "./SectionText.css";
 
 function SectionText({
   label = "Welcome To StorAid",

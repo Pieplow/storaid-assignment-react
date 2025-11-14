@@ -1,6 +1,13 @@
 :root {
+
   --clr-background:white;
   --clr-second-background:#12372A;
+  --clr-beige-background:#faf8ec;
+  --clr-light-green-background:#355349;
+  --clr-grey-background:#ececec;
+  --clr-green-white-background: #f1ffea;
+  --clr-dark-green-background: #12372a;
+
   --color-text: #12372A;
   --color-accent: #F1C30C;
   --color-border: #e0e0e0;
@@ -8,6 +15,8 @@
   
   --font-main: 'Inter', sans-serif;
   --font-heading: 'Poppins', sans-serif;
+
+  --font-weight-bold: 700;
 
  
   --spacing-section: 80px;

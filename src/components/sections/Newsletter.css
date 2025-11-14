@@ -1,0 +1,173 @@
+.newsletter-section h2 {
+  color: var(--color-text);
+}
+
+.newsletter-section p {
+  color: var(--color-text);
+}
+
+.newsletter-section {
+  background-color: var(--clr-beige-background);
+  padding: 2rem 0;
+}
+
+/* ----------- FORMULÄRET ----------- */
+
+/* Gör så att input + knapp ligger bredvid varandra */
+.newsletter-form-wrapper form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Inputfältet */
+.newsletter-section input[type="email"] {
+  flex: 1;
+  max-width: 300px;
+  padding: 0.6rem 1rem;
+  border: 1px solid #f7b500; 
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.newsletter-section input[type="email"]::placeholder {
+  color: #dad1d1;
+}
+
+/* Knappen */
+.newsletter-form-wrapper button {
+  flex-shrink: 0;
+  width: auto;
+  padding: 0.6rem 1.5rem;
+  height: 48px;
+  line-height: 1;
+  border-radius: 6px;
+}
+
+/* Fel-/succémeddelande under (stabil position) */
+.newsletter-form-wrapper .mt-3 {
+  height: 1.5rem; /* FAST höjd istället för min-height */
+  margin-top: 0.75rem;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center; /* centrerar texten vertikalt */
+  overflow: hidden; /* hindrar att höjden ändras */
+}
+
+/* ----------- LAYOUT ----------- */
+
+/* Hela raden centrerad */
+.newsletter-section .row {
+  justify-content: center;
+}
+
+
+
+/* Håller höjden konsekvent mellan input och knapp */
+.newsletter-section input[type="email"],
+.newsletter-section button {
+  height: 48px;
+  line-height: 1;
+}
+
+/* ==== TUNING-VARIABLER (ändra siffran om du vill) ==== */
+:root {
+  --newsletter-input-width: 350px; /* gör fältet längre/kortare här */
+  --newsletter-control-height: 49px;
+}
+
+/* Vänsterkolumn: rubrik + brödtext vänsterställd */
+.newsletter-section .col-md-6:first-child {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Högerkolumn: allt vänsterställt */
+.newsletter-section .col-md-6:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* <— viktigt: inte center */
+  justify-content: flex-start;
+}
+
+/* Form-raden: input + knapp på SAMMA rad */
+.newsletter-form-wrapper form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: flex-start; /* <— ingen centrering */
+}
+
+/* Långt inputfält */
+.newsletter-section input[type="email"] {
+  flex: 0 0 var(--newsletter-input-width);  /* fast, “långt” fält */
+  width: var(--newsletter-input-width);
+  max-width: 100%;
+  height: var(--newsletter-control-height);
+  line-height: 1;
+  padding: 0.6rem 1rem;
+  border: 1px solid #f7b500;
+  border-radius: 6px;
+}
+
+/* Knappen: samma höjd som input, auto-bredd */
+.newsletter-form-wrapper button {
+  flex: 0 0 auto;
+  width: auto;
+  height: var(--newsletter-control-height);
+  line-height: 1;
+  border-radius: 6px;
+  padding: 0 1.5rem;
+}
+
+
+.newsletter-form-wrapper .mt-3 .text-success,
+.newsletter-form-wrapper .mt-3 .text-danger {
+  font-size: 0.95rem;
+}
+
+.newsletter-form-wrapper .mt-3 .text-success {
+  color: #198754;          
+}
+
+.newsletter-form-wrapper .mt-3 .text-danger {
+  color: #dc3545;          /* Bootstrap “danger”-röd */
+}
+
+/* VALFRITT: gör placeholdern lite ljusare */
+.newsletter-section input[type="email"]::placeholder {
+  color: #b8b8b8;
+}
+
+.newsletter-section .col-md-6:last-child {
+  margin-top: 1.5rem; /* justera värdet efter behov */
+}
+
+/* --- STABILISERING FIX --- */
+
+/* Hindrar Bootstrap från att centrera vertikalt dynamiskt */
+.newsletter-section .row.align-items-center {
+  align-items: flex-start !important;
+}
+
+/* Tvingar formuläret att hålla sin position */
+.newsletter-section .col-md-6:last-child {
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+/* Fixar meddelandehöjden helt statiskt */
+.newsletter-form-wrapper .mt-3 {
+  height: 1.6rem !important;
+  display: flex !important;
+  align-items: center;
+  overflow: hidden;
+}

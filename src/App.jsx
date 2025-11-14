@@ -1,15 +1,24 @@
-import React from "react";
-import Header from './components/sections/Header';
-import "./styles/global.css";
+import SocialBar from "./components/layout/SocialBar";
+import Navbar from "./components/layout/Navbar";
+import Newsletter from "./components/sections/Newsletter";
+import Footer from "./components/sections/Footer";
 
-function App() {
+
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Services from "./Pages/Services";
+import Contact from "./Pages/Contact";
+import Booking from "./Pages/Booking";
+import NotFound from "./Pages/NotFound";
+
+export default function App() {
   return (
     <>
-      <Header />
+      <Header /> {}
          
 
     </>
   );
 }
-
-export default App;
