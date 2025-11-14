@@ -72,8 +72,11 @@ const Newsletter = () => {
               />
        
 
-              <Button label={loading ? "Submitting..." : "Submit"} 
-              disabled={loading} />
+              <Button 
+  label={loading ? "Submitting..." : "Submit"} 
+  disabled={loading} 
+  type="submit"
+/>
              
             </form>
              <div className="mt-3">
