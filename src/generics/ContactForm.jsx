@@ -12,7 +12,7 @@ const ContactForm = () => {
   });
 
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState(null);
+  const [status, setStatus] = useState(null); // success, error message, or "loading"
 
   const validate = () => {
     const newErrors = {};
@@ -34,7 +34,7 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" }); // clear error on typing
+    setErrors({ ...errors, [e.target.name]: "" }); 
   };
 
   const handleSubmit = async (e) => {
@@ -53,7 +53,9 @@ const ContactForm = () => {
 
     try {
       await sendContact(payload);
+
       setStatus("success");
+
       setFormData({
         name: "",
         email: "",
@@ -61,8 +63,17 @@ const ContactForm = () => {
         subject: "",
         message: "",
       });
+
     } catch (err) {
-      setStatus("error");
+      if (err.status === 400) {
+        setStatus(err.data?.message || "Invalid input (400)");
+      } else if (err.status === 404) {
+        setStatus("Endpoint not found (404)");
+      } else if (err.status === 500) {
+        setStatus("Server error (500)");
+      } else {
+        setStatus("Could not send message. Please try again.");
+      }
     }
   };
 
@@ -71,6 +82,7 @@ const ContactForm = () => {
       <div className="container">
         <div className="contact-form-wrapper bg-light-yellow p-4 rounded-3 shadow-sm">
           <form onSubmit={handleSubmit} noValidate>
+
             {/* Name */}
             <div className="mb-3">
               <label className="form-label fw-semibold">
@@ -78,18 +90,14 @@ const ContactForm = () => {
               </label>
               <input
                 type="text"
-                className={`form-control form-input ${
-                  errors.name ? "is-invalid" : ""
-                }`}
+                className={`form-control form-input ${errors.name ? "is-invalid" : ""}`}
                 name="name"
                 placeholder="Your name"
                 value={formData.name}
                 onChange={handleChange}
                 required
               />
-              {errors.name && (
-                <div className="invalid-feedback">{errors.name}</div>
-              )}
+              {errors.name && <div className="invalid-feedback">{errors.name}</div>}
             </div>
 
             {/* Email + Telephone */}
@@ -99,80 +107,65 @@ const ContactForm = () => {
                   Email <span className="text-danger">*</span>
                 </label>
                 <input
-                  type="email"
-                  className={`form-control form-input ${
-                    errors.email ? "is-invalid" : ""
-                  }`}
+                  type="text"
+                  className={`form-control form-input ${errors.email ? "is-invalid" : ""}`}
                   name="email"
                   placeholder="Email"
                   value={formData.email}
                   onChange={handleChange}
                   required
                 />
-                {errors.email && (
-                  <div className="invalid-feedback">{errors.email}</div>
-                )}
+                {errors.email && <div className="invalid-feedback">{errors.email}</div>}
               </div>
 
               <div className="col-md-6 mb-3">
                 <label className="form-label fw-semibold">Telephone</label>
                 <input
                   type="text"
-                  className={`form-control form-input ${
-                    errors.telephone ? "is-invalid" : ""
-                  }`}
+                  className={`form-control form-input ${errors.telephone ? "is-invalid" : ""}`}
                   name="telephone"
                   placeholder="Telephone"
                   value={formData.telephone}
                   onChange={handleChange}
                 />
-                {errors.telephone && (
-                  <div className="invalid-feedback">{errors.telephone}</div>
-                )}
+                {errors.telephone && <div className="invalid-feedback">{errors.telephone}</div>}
               </div>
             </div>
 
-            
+            {/* Subject */}
             <div className="mb-3">
               <label className="form-label fw-semibold">
                 Subject <span className="text-danger">*</span>
               </label>
               <input
                 type="text"
-                className={`form-control form-input ${
-                  errors.subject ? "is-invalid" : ""
-                }`}
+                className={`form-control form-input ${errors.subject ? "is-invalid" : ""}`}
                 name="subject"
                 placeholder="How can we help you"
                 value={formData.subject}
                 onChange={handleChange}
                 required
               />
-              {errors.subject && (
-                <div className="invalid-feedback">{errors.subject}</div>
-              )}
+              {errors.subject && <div className="invalid-feedback">{errors.subject}</div>}
             </div>
 
-          
+            {/* Message */}
             <div className="mb-3">
               <label className="form-label fw-semibold">
                 Comments / Questions <span className="text-danger">*</span>
               </label>
               <textarea
                 name="message"
-                className={`form-control form-input ${
-                  errors.message ? "is-invalid" : ""
-                }`}
+                className={`form-control form-input ${errors.message ? "is-invalid" : ""}`}
                 rows="4"
                 placeholder="Comments"
                 value={formData.message}
                 onChange={handleChange}
                 required
               ></textarea>
-              {errors.message && (
-                <div className="invalid-feedback">{errors.message}</div>
-              )}
+              {errors.message && <div className="invalid-feedback">{errors.message}</div>}
             </div>
+<div className="d-flex align-items-center gap-3 mt-3">
 
             <button
               type="submit"
@@ -183,13 +176,16 @@ const ContactForm = () => {
             </button>
 
             {status === "success" && (
-              <p className="text-success mt-3">Message sent successfully!</p>
+              <span className="text-success fw-semibold">Message sent successfully!</span>
             )}
-            {status === "error" && (
-              <p className="text-danger mt-3">
-                Could not send message. Please try again.
-              </p>
-            )}
+
+            {status &&
+              status !== "success" &&
+              status !== "loading" && (
+                <span className="text-danger fw-semibold">{status}</span>
+              )}
+          </div>
+
           </form>
         </div>
       </div>
