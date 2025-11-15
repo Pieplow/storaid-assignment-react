@@ -33,15 +33,25 @@ const Newsletter = () => {
   setMessage('');
   setLoading(true);
 
-  try {
-    const response = await sendSubscribe({ email }); 
-    setMessage(response.message || "You're now subscribed!");
-    setEmail('');
-  } catch (err) {
-    setError('Subscription failed. Please try again later.');
-  } finally {
-    setLoading(false);
+try {
+  const response = await sendSubscribe({ email });
+  setMessage(response.message || "You're now subscribed!");
+  setEmail('');
+} catch (err) {
+  if (err.status === 400) {
+    // Visa meddelandet som API:t skickar
+    setError(err.data?.message || "Invalid input (400)");
+  } else if (err.status === 404) {
+    setError("Endpoint not found (404)");
+  } else if (err.status === 500) {
+    setError("Server error (500)");
+  } else {
+    setError("Subscription failed. Please try again later.");
   }
+} finally {
+  setLoading(false);
+}
+
 };
 
   return (
