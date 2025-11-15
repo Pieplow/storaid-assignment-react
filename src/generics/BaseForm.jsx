@@ -69,7 +69,7 @@ const BaseForm = ({ type, fields }) => {
         </div>
       ))}
     <div className="d-flex align-items-center gap-3 mt-3">
-      <button type="submit" className="btn btn-warning text-dark fw-semibold">
+      <button type="submit" className="btn btn-warning fw-semibold">
         {type === "booking" ? "Book Unit" : "Send Message"}
       </button>
 
