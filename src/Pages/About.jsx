@@ -11,8 +11,11 @@ export default function About() {
     <>
       <HeroSection 
         title="About Us"
-        label="Learn more about our mission."
-        text=""
+        label=""
+        text="Learn more about our mission."
+        showButton={false}
+        showImage={false} 
+
       />
       
         <AboutUs />

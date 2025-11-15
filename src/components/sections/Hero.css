@@ -1,8 +1,12 @@
 .hero-section {
   background-color: var(--clr-light-green-background);
+  min-height: 400px;  
+  display: flex;
+  align-items: center;
+  
 }
 .home-hero .section-text_label {
-  color: yellow;
+  color: var(--clr-accent)
 }
 
 .hero-section img {

@@ -9,7 +9,10 @@ export default function Services() {
     <>
       <HeroSection 
         title="Our Services"
-        subtitle="What we can help you with."
+        text="What we can help you with."
+        label=""
+        showButton={false}
+        showImage={false} 
       />
       <OurServices />
       <TestimonialSection />

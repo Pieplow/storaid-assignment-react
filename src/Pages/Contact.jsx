@@ -7,9 +7,12 @@ export default function Contact() {
   return (
     <>
       <HeroSection 
-        Label="Contact Us"
+        label=""
         title="We’d love to hear from you."
-        text=""
+        text="Contact Us"
+        showButton={false}
+        showImage={false} 
+
       />
       <ContactSection />
       <FindUsSection />

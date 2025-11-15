@@ -11,7 +11,8 @@ import BlogSection from "../components/sections/BlogSection";
 export default function Home() {
   return (
     <>
-      <HeroSection />
+      <HeroSection 
+      className="home-hero"/>
       <AboutUs />
       <LogoSection />
       <OurServices />

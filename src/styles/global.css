@@ -25,7 +25,3 @@ body {
   min-height: 100vh;      /* gör att footern hamnar längst ner */
 }
 
-main {
-  flex: 1;                /* gör att main tar plats mellan header och footer */
-  padding: 2rem;
-}
