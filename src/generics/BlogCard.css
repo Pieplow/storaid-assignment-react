@@ -76,3 +76,39 @@
   color: var(--color-accent-hover, #ffd65b);
 }
 
+
+.blog-card:hover {
+  background-color: var(--clr-green-white-background); 
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+
+.blog-card:hover .blog-title,
+.blog-card:hover .blog-description,
+.blog-card:hover .blog-date span,
+.blog-card:hover .read-more-btn {
+  color: var(--clr-dark-green-text);
+}
+
+
+.blog-card:hover .calendar-icon {
+  filter: brightness(0); 
+}
+
+.blog-card:hover .blog-image {
+  opacity: 1;
+}
+
+.blog-card:hover .blog-title,
+.blog-card:hover .blog-description,
+.blog-card:hover .blog-date span,
+.blog-card:hover .read-more-btn {
+  color: #000000 !important;
+}
+
+/* Ikonen blir också svart */
+.blog-card:hover .calendar-icon {
+  filter: brightness(0); /* gör den svart */
+}
