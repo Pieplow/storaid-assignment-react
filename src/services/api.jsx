@@ -1,5 +1,16 @@
 const BASE_URL = 'https://win25-jsf-assignment.azurewebsites.net/api';
-//POST//
+
+async function handleError(res, defaultMessage) {
+  let errorBody = {};
+  try {
+    errorBody = await res.json();
+  } catch {}
+  const error = new Error(errorBody.message || defaultMessage);
+  error.status = res.status;
+  error.data = errorBody;
+  throw error;
+}
+
 export const sendSubscribe = async (data) => {
   try {
     const res = await fetch(`${BASE_URL}/subscribe`, {
@@ -8,11 +19,14 @@ export const sendSubscribe = async (data) => {
       body: JSON.stringify(data),
     });
 
-    if (!res.ok) throw new Error('Kunde inte skicka formulär');
+    if (!res.ok) {
+      await handleError(res, 'Kunde inte skicka formulär');
+    }
+
     return await res.json();
-    
+
   } catch (err) {
-    console.error('API error:', err);
+    console.error('API error (subscribe):', err);
     throw err;
   }
 };
@@ -24,8 +38,13 @@ export const sendContact = async (data) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
-    if (!res.ok) throw new Error("Kunde inte skicka kontaktformulär");
+
+    if (!res.ok) {
+      await handleError(res, "Kunde inte skicka kontaktformulär");
+    }
+
     return await res.json();
+
   } catch (err) {
     console.error("API error (contact):", err);
     throw err;
@@ -39,15 +58,19 @@ export const sendBooking = async (data) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
-    if (!res.ok) throw new Error("Kunde inte skicka bokningsformulär");
+
+    if (!res.ok) {
+      await handleError(res, "Kunde inte skicka bokningsformulär");
+    }
+
     return await res.json();
+
   } catch (err) {
     console.error("API error (booking):", err);
     throw err;
   }
 };
 
-//GET//
 export const getFaqs = async () => {
   try {
     const res = await fetch(`${BASE_URL}/faqs`);
