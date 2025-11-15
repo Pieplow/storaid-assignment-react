@@ -17,7 +17,7 @@ const BookingSection = () => {
                 <SectionText
                 label="Get in Touch"
                 title="Get Personalized Assistance – Contact Us"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                text=""
                 />
             </div>
             <div className="booking-image-wrapper">

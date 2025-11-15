@@ -18,13 +18,22 @@ const BaseForm = ({ type, fields }) => {
 
     try {
       let response;
+
       if (type === "booking") response = await sendBooking(formData);
       if (type === "contact") response = await sendContact(formData);
 
       setSuccess("Form submitted successfully!");
       setFormData({});
     } catch (err) {
-      setError("Something went wrong. Please try again.");
+      if (err.status === 400) {
+        setError(err.data?.message || "Invalid input (400)");
+      } else if (err.status === 404) {
+        setError("Endpoint not found (404)");
+      } else if (err.status === 500) {
+        setError("Server error (500)");
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
     }
   };
 
@@ -33,9 +42,9 @@ const BaseForm = ({ type, fields }) => {
       {fields.map((field) => (
         <div className="mb-3" key={field.name}>
           <label className="form-label fw-semibold">
-            {field.label}{" "}
-            {field.required && <span className="text-danger">*</span>}
+            {field.label} {field.required && <span className="text-danger">*</span>}
           </label>
+
           {field.type === "textarea" ? (
             <textarea
               name={field.name}
@@ -59,13 +68,14 @@ const BaseForm = ({ type, fields }) => {
           )}
         </div>
       ))}
-
+    <div className="d-flex align-items-center gap-3 mt-3">
       <button type="submit" className="btn btn-warning text-dark fw-semibold">
         {type === "booking" ? "Book Unit" : "Send Message"}
       </button>
 
-      {success && <p className="text-success mt-3">{success}</p>}
-      {error && <p className="text-danger mt-3">{error}</p>}
+      {success && <span className="text-success">{success}</span>}
+      {error && <span className="text-danger">{error}</span>}
+    </div>
     </form>
   );
 };
