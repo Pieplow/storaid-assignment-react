@@ -12,30 +12,42 @@ const BaseForm = ({ type, fields }) => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError(null);
-    setSuccess(null);
+  e.preventDefault();
+  setError(null);
+  setSuccess(null);
 
-    try {
-      let response;
+ if (formData.email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(formData.email)) {
+    setError("Please enter a valid email address.");
+    return;
+  }
+}
 
-      if (type === "booking") response = await sendBooking(formData);
-      if (type === "contact") response = await sendContact(formData);
+  try {
+    let response;
 
-      setSuccess("Form submitted successfully!");
-      setFormData({});
-    } catch (err) {
-      if (err.status === 400) {
-        setError(err.data?.message || "Invalid input (400)");
-      } else if (err.status === 404) {
-        setError("Endpoint not found (404)");
-      } else if (err.status === 500) {
-        setError("Server error (500)");
-      } else {
-        setError("Something went wrong. Please try again.");
-      }
+    if (type === "booking") response = await sendBooking(formData);
+    if (type === "contact") response = await sendContact(formData);
+
+    setSuccess(response.message || "Form submitted successfully!");
+    setFormData({});
+  } catch (err) {
+   
+    if (err.status === 400) {
+      setError(err.data?.message || "Invalid input (400)");
+    } 
+    else if (err.status === 404) {
+      setError("Endpoint not found (404)");
     }
-  };
+    else if (err.status === 500) {
+      setError("Server error (500)");
+    }
+    else {
+      setError(err.message || "Something went wrong. Please try again.");
+    }
+  }
+};
 
   return (
     <form onSubmit={handleSubmit} className="booking-form">

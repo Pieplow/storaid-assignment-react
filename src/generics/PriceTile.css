@@ -11,7 +11,7 @@
   align-items: center;
 }
 .price-tile:hover .description {
-  color: white; /* vit när hela kortet hovras */
+  color: white; 
 }
 
 .price {
