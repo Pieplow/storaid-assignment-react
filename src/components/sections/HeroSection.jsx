@@ -13,6 +13,7 @@ function HeroSection({
   showButton = true,
   showImage = true,
   className = "",
+  buttonLink, 
 }) {
   const bodyText = text ?? subtitle ?? "";
 
@@ -23,7 +24,7 @@ function HeroSection({
           {/* VÄNSTER KOLONN – SAMMA SOM DIN ORIGINELLA LAYOUT */}
           <div className="col-md-6 text-center text-md-start">
             <SectionText label={label} title={title} text={bodyText} />
-            {showButton && <Button label={buttonLabel} />}
+            {showButton && <Button label={buttonLabel} to={buttonLink} className="btn-hover-dark" />}
           </div>
 
           {/* HÖGER KOLONN – FINNS ALLTID, BILDEN ÄR VALFRI */}
