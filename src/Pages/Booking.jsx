@@ -9,7 +9,8 @@ export default function Booking() {
     <>
       <HeroSection 
         title="Book Your Storage"
-        subtitle="Fast and simple booking."
+        label=""
+        text="Fast and simple booking."
         showButton={false}
         showImage={false} 
       />

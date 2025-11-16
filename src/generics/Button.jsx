@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Button.css";
 
-function Button({ label = "Book Now", type = "button", onClick, disabled, className= "" }) {
+function Button({ label = "Book Now", type = "button", onClick, disabled, className= "", to }) {
   const navigate = useNavigate();
 
   const handleClick = (e) => {
@@ -11,7 +11,7 @@ function Button({ label = "Book Now", type = "button", onClick, disabled, classN
       return;
     }
 
-    navigate("/booking");
+    navigate(to || "/booking");
 
     if (onClick) onClick(e);
   };

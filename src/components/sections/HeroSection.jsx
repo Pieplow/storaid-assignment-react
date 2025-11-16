@@ -8,7 +8,7 @@ function HeroSection({
   label,
   title = "Space Simplified, Storage Perfected",
   text = "  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, corrupti! Est, corrupti laboriosam. Perferendis provident autem amet quia voluptatum dolores suscipit, necessitatibus officia! Necessitatibus suscipit vel sed impedit tempore possimus. ",
-  subtitle,               // stöd för både text och subtitle
+  subtitle,               
   buttonLabel = "Discover More",
   showButton = true,
   showImage = true,
@@ -23,7 +23,7 @@ function HeroSection({
           {/* VÄNSTER KOLONN – SAMMA SOM DIN ORIGINELLA LAYOUT */}
           <div className="col-md-6 text-center text-md-start">
             <SectionText label={label} title={title} text={bodyText} />
-            {showButton && <Button label={buttonLabel} className="btn-hover-dark" />}
+            {showButton && <Button label={buttonLabel} />}
           </div>
 
           {/* HÖGER KOLONN – FINNS ALLTID, BILDEN ÄR VALFRI */}
