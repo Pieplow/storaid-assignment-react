@@ -1,6 +1,6 @@
 .btn {
   background-color: var(--color-accent);
-  color: var(white);
+  color: var(--color-text);
   font-weight: var(--font-weight-bold, 700);
   font-size: 0.9rem;
   padding: 10px 24px;
@@ -10,7 +10,24 @@
   transition: background 0.2s;
 }
 
+/* DEFAULT HOVER */
 .btn:hover {
   background-color: var(--color-text);
   color: white;
+}
+
+/* VARIANT: hover på ljus bakgrund */
+.btn-hover-light:hover {
+  background-color: var(--clr-dark-green-background);
+  color: white;
+}
+
+/* VARIANT: hover på mörk bakgrund */
+.btn-hover-dark:hover {
+  background-color: white;
+  color: black;
+}
+.btn-hover-dark:hover {
+  background-color: white;
+  color: black; /* eller var(--color-text) om du vill */
 }
