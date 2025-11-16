@@ -34,7 +34,7 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" }); 
+    setErrors({ ...errors, [e.target.name]: "" });
   };
 
   const handleSubmit = async (e) => {
@@ -52,9 +52,12 @@ const ContactForm = () => {
     };
 
     try {
-      await sendContact(payload);
+      const response = await sendContact(payload);
+      setStatus(response.message || "Message sent successfully!");
 
-      setStatus("success");
+      setTimeout(() => {
+      setStatus(null);
+      }, 4000);
 
       setFormData({
         name: "",
@@ -63,7 +66,6 @@ const ContactForm = () => {
         subject: "",
         message: "",
       });
-
     } catch (err) {
       if (err.status === 400) {
         setStatus(err.data?.message || "Invalid input (400)");
@@ -85,10 +87,11 @@ const ContactForm = () => {
 
             {/* Name */}
             <div className="mb-3">
-              <label className="form-label fw-semibold">
+              <label htmlFor="name" className="form-label fw-semibold">
                 Your Name <span className="text-danger">*</span>
               </label>
               <input
+                id="name"
                 type="text"
                 className={`form-control form-input ${errors.name ? "is-invalid" : ""}`}
                 name="name"
@@ -96,17 +99,24 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
+                aria-invalid={!!errors.name}
+                aria-describedby={errors.name ? "name-error" : undefined}
               />
-              {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+              {errors.name && (
+                <div id="name-error" className="invalid-feedback" role="alert">
+                  {errors.name}
+                </div>
+              )}
             </div>
 
             {/* Email + Telephone */}
             <div className="row">
               <div className="col-md-6 mb-3">
-                <label className="form-label fw-semibold">
+                <label htmlFor="email" className="form-label fw-semibold">
                   Email <span className="text-danger">*</span>
                 </label>
                 <input
+                  id="email"
                   type="text"
                   className={`form-control form-input ${errors.email ? "is-invalid" : ""}`}
                   name="email"
@@ -114,30 +124,46 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  aria-invalid={!!errors.email}
+                  aria-describedby={errors.email ? "email-error" : undefined}
                 />
-                {errors.email && <div className="invalid-feedback">{errors.email}</div>}
+                {errors.email && (
+                  <div id="email-error" className="invalid-feedback" role="alert">
+                    {errors.email}
+                  </div>
+                )}
               </div>
 
               <div className="col-md-6 mb-3">
-                <label className="form-label fw-semibold">Telephone</label>
+                <label htmlFor="telephone" className="form-label fw-semibold">
+                  Telephone <span className="text-danger">*</span>
+                </label>
                 <input
+                  id="telephone"
                   type="text"
                   className={`form-control form-input ${errors.telephone ? "is-invalid" : ""}`}
                   name="telephone"
                   placeholder="Telephone"
                   value={formData.telephone}
                   onChange={handleChange}
+                  aria-invalid={!!errors.telephone}
+                  aria-describedby={errors.telephone ? "telephone-error" : undefined}
                 />
-                {errors.telephone && <div className="invalid-feedback">{errors.telephone}</div>}
+                {errors.telephone && (
+                  <div id="telephone-error" className="invalid-feedback" role="alert">
+                    {errors.telephone}
+                  </div>
+                )}
               </div>
             </div>
 
             {/* Subject */}
             <div className="mb-3">
-              <label className="form-label fw-semibold">
+              <label htmlFor="subject" className="form-label fw-semibold">
                 Subject <span className="text-danger">*</span>
               </label>
               <input
+                id="subject"
                 type="text"
                 className={`form-control form-input ${errors.subject ? "is-invalid" : ""}`}
                 name="subject"
@@ -145,16 +171,23 @@ const ContactForm = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 required
+                aria-invalid={!!errors.subject}
+                aria-describedby={errors.subject ? "subject-error" : undefined}
               />
-              {errors.subject && <div className="invalid-feedback">{errors.subject}</div>}
+              {errors.subject && (
+                <div id="subject-error" className="invalid-feedback" role="alert">
+                  {errors.subject}
+                </div>
+              )}
             </div>
 
             {/* Message */}
             <div className="mb-3">
-              <label className="form-label fw-semibold">
+              <label htmlFor="message" className="form-label fw-semibold">
                 Comments / Questions <span className="text-danger">*</span>
               </label>
               <textarea
+                id="message"
                 name="message"
                 className={`form-control form-input ${errors.message ? "is-invalid" : ""}`}
                 rows="4"
@@ -162,29 +195,42 @@ const ContactForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
+                aria-invalid={!!errors.message}
+                aria-describedby={errors.message ? "message-error" : undefined}
               ></textarea>
-              {errors.message && <div className="invalid-feedback">{errors.message}</div>}
-            </div>
-<div className="d-flex align-items-center gap-3 mt-3">
-
-            <button
-              type="submit"
-              className="btn btn-warning px-4 fw-bold"
-              disabled={status === "loading"}
-            >
-              {status === "loading" ? "Sending..." : "Submit"}
-            </button>
-
-            {status === "success" && (
-              <span className="text-success fw-semibold">Message sent successfully!</span>
-            )}
-
-            {status &&
-              status !== "success" &&
-              status !== "loading" && (
-                <span className="text-danger fw-semibold">{status}</span>
+              {errors.message && (
+                <div id="message-error" className="invalid-feedback" role="alert">
+                  {errors.message}
+                </div>
               )}
-          </div>
+            </div>
+
+            {/* Submit + status */}
+            <div className="d-flex align-items-center gap-3 mt-3">
+              <button
+                type="submit"
+                className="btn btn-warning px-4 fw-bold"
+                disabled={status === "loading"}
+              >
+                {status === "loading" ? "Sending..." : "Submit"}
+              </button>
+
+              <div aria-live="assertive">
+                {/* Success message */}
+                {status &&
+                  !status.toLowerCase().includes("error") &&
+                  status !== "loading" && (
+                    <span className="text-success fw-semibold">{status}</span>
+                )}
+
+                {/* Error message */}
+                {status &&
+                  status.toLowerCase().includes("error") &&
+                  status !== "loading" && (
+                    <span className="text-danger fw-semibold">{status}</span>
+                )}
+              </div>
+            </div>
 
           </form>
         </div>
