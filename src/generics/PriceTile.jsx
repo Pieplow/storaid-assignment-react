@@ -24,7 +24,11 @@ const PriceTile = ({ title, price }) => {
         <li>Etiam eget libero non ligula</li>
       </ul>
 
-      <Button label="Rent Now" className="btn-hover-dark" />
+      <Button
+  label="Rent Now"
+  className="btn-hover-dark"
+  onClick={() => (window.location.href = "/404")}
+/>
     </div>
   );
 };
