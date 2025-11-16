@@ -22,10 +22,9 @@ export default function About() {
       
       <LogoSection />
        <TestimonialSection />
-       <div style={{ backgroundColor: "white" }}>
-      <ChooseUs />
-      </div>
-
+     <div className="chooseus-about">
+  <ChooseUs />
+</div>
     </>
   );
 }
