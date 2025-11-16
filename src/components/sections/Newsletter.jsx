@@ -16,22 +16,36 @@ const Newsletter = () => {
   };
 
   const handleChange = (e) => {
-    const value = e.target.value;
-    setEmail(value);
-    setError(isValidEmail(value) ? '' : 'Invalid email address');
-  };
+  const value = e.target.value;
+  setEmail(value);
+
+  // Always clear success message when typing
+  setMessage("");
+
+  // Live validation
+  if (isValidEmail(value)) {
+    setError("");
+  } else {
+    setError("Invalid email address");
+  }
+};
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (!isValidEmail(email)) {
-      setError("Please enter a valid email before submitting");
-     return;
+  // If invalid → show ONLY error
+  if (!isValidEmail(email)) {
+    setMessage(""); // remove any old success
+    setError("Please enter a valid email before submitting");
+    return;
   }
 
-  setError('');
-  setMessage('');
+  // Clear error AND success before sending request
+  setError("");
+  setMessage("");
   setLoading(true);
+
+ 
 
 try {
   const response = await sendSubscribe({ email });
@@ -83,11 +97,11 @@ try {
        
 
               <Button 
-  label={loading ? "Submitting..." : "Submit"} 
-  disabled={loading} 
-  type="submit"
-/>
-             
+                label={loading ? "Submitting..." : "Submit"} 
+                disabled={loading} 
+                type="submit"
+              />
+                          
             </form>
              <div className="mt-3">
                     {error && <div role="alert" className="error text-danger">{error}</div>}

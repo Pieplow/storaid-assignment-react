@@ -50,13 +50,10 @@
 
 /* Fel-/succémeddelande under (stabil position) */
 .newsletter-form-wrapper .mt-3 {
-  height: 1.5rem; /* FAST höjd istället för min-height */
   margin-top: 0.75rem;
   width: 100%;
   text-align: left;
-  display: flex;
-  align-items: center; /* centrerar texten vertikalt */
-  overflow: hidden; /* hindrar att höjden ändras */
+  display: block;   /* allows text to expand normally */
 }
 
 /* ----------- LAYOUT ----------- */
