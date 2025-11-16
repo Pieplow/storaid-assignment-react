@@ -24,7 +24,7 @@ const PriceTile = ({ title, price }) => {
         <li>Etiam eget libero non ligula</li>
       </ul>
 
-      <Button text="Rent Now"/>
+      <Button label="Rent Now" className="btn-hover-dark" />
     </div>
   );
 };

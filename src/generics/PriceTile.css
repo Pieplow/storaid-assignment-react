@@ -10,6 +10,9 @@
   flex-direction: column;
   align-items: center;
 }
+.price-tile:hover .description {
+  color: white; /* vit när hela kortet hovras */
+}
 
 .price {
   display: flex;
