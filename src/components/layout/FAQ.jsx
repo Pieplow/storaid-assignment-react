@@ -37,7 +37,7 @@ const FAQ = () => {
           <div className="col-lg-8 col-md-10">
             {error && <p className="faq-error text-center">{error}</p>}
 
-            <div className="faq-list" role="list">
+            <div className="faq-list">
               {faqs.map((faq, index) => {
                 const isOpen = activeIndex === index;
                 const questionId = `faq-question-${index}`;
@@ -47,7 +47,6 @@ const FAQ = () => {
                   <div
                     key={faq.id || index}
                     className={`faq-item ${isOpen ? "active" : ""}`}
-                    role="listitem"
                   >
                     <button
                       id={questionId}

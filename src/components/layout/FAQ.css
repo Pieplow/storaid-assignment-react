@@ -41,7 +41,7 @@
   align-items: center;
   cursor: pointer;
   transition: all 0.25s ease;
-  outline: none;
+  
 }
 
 .faq-question:hover {
@@ -161,4 +161,17 @@
   font-size: 0.95rem;
   line-height: 1.5;
   margin: 0;
+}
+
+/* Vid tabbning */
+
+.faq-question:focus-visible .faq-icon {
+  color: var(--clr-accent); 
+}
+.faq-question:focus-visible {
+  outline: 3px solid #000 !important; /* fallback färg */
+  outline-offset: 4px !important;
+  border-radius: 8px !important;
+  background-color: var(--color-accent);
+  color: white;
 }
