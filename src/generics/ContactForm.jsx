@@ -136,7 +136,7 @@ const ContactForm = () => {
 
               <div className="col-md-6 mb-3">
                 <label htmlFor="telephone" className="form-label fw-semibold">
-                  Telephone <span className="text-danger">*</span>
+                  Telephone 
                 </label>
                 <input
                   id="telephone"
