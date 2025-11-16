@@ -1,3 +1,13 @@
 .book-now-section {
     background-color: var(--clr-light-green-background);
 }
+.book-now-section  button.btn:focus-visible {
+  outline: 3px solid #fff !important;
+}
+
+.book-now-section button.btn:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 4px;
+  color: white; /* texten syns */
+  background-color: transparent; /* behåll din design */
+}
