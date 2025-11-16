@@ -14,23 +14,61 @@ const ContactForm = () => {
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState(null); // success, error message, or "loading"
 
-  const validate = () => {
-    const newErrors = {};
+const validate = () => {
+  const newErrors = {};
 
-    if (!formData.name.trim()) newErrors.name = "Name is required.";
-    if (!formData.email) {
-      newErrors.email = "Email is required.";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email.";
+  // Name: only letters + spaces + åäö and minimum length 2
+  const nameRegex = /^[A-Za-zÅÄÖåäö\s-]{2,}$/;
+
+  // Email: standard robust email regex
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // Phone: only digits, length 6–15
+  const phoneRegex = /^\d{6,15}$/;
+
+  // Subject: allow letters, numbers, punctuation and spaces (min 3 chars)
+  const subjectRegex = /^[A-Za-z0-9ÅÄÖåäö\s.,!?'"()-]{3,}$/;
+
+  // Message: at least 10 characters, allow almost anything except < >
+  const messageRegex = /^[^<>]{10,}$/;
+
+
+  // VALIDATION RULES
+  if (!formData.name.trim()) {
+    newErrors.name = "Name is required.";
+  } else if (!nameRegex.test(formData.name)) {
+    newErrors.name = "Name contains invalid characters.";
+  }
+
+  if (!formData.email.trim()) {
+    newErrors.email = "Email is required.";
+  } else if (!emailRegex.test(formData.email)) {
+    newErrors.email = "Please enter a valid email address.";
+  }
+
+  if (!formData.subject.trim()) {
+    newErrors.subject = "Subject is required.";
+  } else if (!subjectRegex.test(formData.subject)) {
+    newErrors.subject = "Subject contains invalid characters.";
+  }
+
+  if (!formData.message.trim()) {
+    newErrors.message = "Message is required.";
+  } else if (!messageRegex.test(formData.message)) {
+    newErrors.message = "Message must be at least 10 characters.";
+  }
+
+  if (formData.telephone.trim()) {
+    if (!phoneRegex.test(formData.telephone)) {
+      newErrors.telephone =
+        "Telephone must contain 6–15 digits and no special characters.";
     }
-    if (!formData.subject.trim()) newErrors.subject = "Subject is required.";
-    if (!formData.message.trim()) newErrors.message = "Message is required.";
-    if (formData.telephone && formData.telephone.length < 6)
-      newErrors.telephone = "Phone number seems too short.";
+  }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+  setErrors(newErrors);
+  return Object.keys(newErrors).length === 0;
+};
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
