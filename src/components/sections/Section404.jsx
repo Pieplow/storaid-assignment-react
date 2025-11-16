@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from './HeroSection'
+import HeroSection from './HeroSection'
 
 
 const Section404 = () => {
