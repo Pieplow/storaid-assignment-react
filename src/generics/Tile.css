@@ -34,3 +34,8 @@ padding-right: 0.5rem;
 }
 
 
+.tile-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
