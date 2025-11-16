@@ -20,3 +20,7 @@
 
 }
 
+.hero-section button.btn:focus-visible {
+  outline: 3px solid #fff !important;
+}
+

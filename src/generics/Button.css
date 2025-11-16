@@ -31,3 +31,18 @@
   background-color: white;
   color: black; /* eller var(--color-text) om du vill */
 }
+
+.btn:focus {
+  outline: 3px solid white; /* mörkgrön outline som syns mot gult */
+  outline-offset: 3px;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #1a5d3b;
+  outline-offset: 3px;
+}
+
+.btn:active {
+  outline: none; /* håll den ren vid klick */
+}
+
