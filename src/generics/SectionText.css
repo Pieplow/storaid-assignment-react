@@ -5,8 +5,8 @@
 }
 
 .section-text_label {
-  color: #ffff;
-  font-weight: 600;
+  color: var(--color-accent);
+  font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
 }
