@@ -9,8 +9,8 @@ export default function Section404() {
         title="404 - Page Not Found"
         text="The page you're looking for doesn’t exist or has been moved."
         buttonLabel="Go Back Home"
-        buttonLink="/"
-        showImage={false}   // <-- så du bara får text + knapp
+        buttonLink="/Home"  
+        showImage={false}
       />
     </>
   );
