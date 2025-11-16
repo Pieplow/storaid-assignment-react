@@ -45,10 +45,9 @@ const BlogCard = ({ blog }) => {
           </p>
         </div>
 
-        {/* Read more */}
         <a href="/404" className="read-more-btn mt-3">
-          Read more →
-        </a>
+       Read more<span className="sr-only"> about {blog.title}</span> →
+      </a>
       </div>
     </div>
   );

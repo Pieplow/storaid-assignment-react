@@ -87,9 +87,8 @@
 
 .blog-card:hover .blog-title,
 .blog-card:hover .blog-description,
-.blog-card:hover .blog-date span,
-.blog-card:hover .read-more-btn {
-  color: var(--clr-dark-green-text);
+.blog-card:hover .blog-date span {
+  color: #000000 !important;
 }
 
 
@@ -101,14 +100,9 @@
   opacity: 1;
 }
 
-.blog-card:hover .blog-title,
-.blog-card:hover .blog-description,
-.blog-card:hover .blog-date span,
-.blog-card:hover .read-more-btn {
-  color: #000000 !important;
-}
 
 /* Ikonen blir också svart */
 .blog-card:hover .calendar-icon {
   filter: brightness(0); /* gör den svart */
 }
+
